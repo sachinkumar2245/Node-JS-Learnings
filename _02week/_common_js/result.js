@@ -8,9 +8,10 @@
 
 
 // es6 module
-import * as arithmeticModule from './arithmetic.mjs'
+import * as arithmeticModule from './arithmetic.js'
 
-console.log(arithmeticModule.multiply(arithmeticModule.num, 3));
+// console.log(arithmeticModule.multiply(arithmeticModule.num, 3));
+console.log(arithmeticModule.multiply(4,4))
 // console.log(arithmeticModule.num);
 
 
