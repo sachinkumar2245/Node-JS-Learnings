@@ -10,7 +10,7 @@ Server ----> Response = Client
 
 //1. import http library/module
 
-const http =  require ('http')
+/*const http =  require ('http')
 
 //2. create server.
 
@@ -29,5 +29,29 @@ server.listen(3100, () => {
 
 
 
+*/
 
 
+const http = require('http'); // importing the server
+
+const port = 3000;
+
+const server = http.createServer((req, res) =>{
+
+    //set the response http header with http status content type
+    res.writeHead(200, 
+        {
+            'content-type': 'text/plain',
+            'X-Powered-By': 'Node.js',
+            'cache-control': 'no-cache, no-store, must-revalidate',
+            'set-cookie': 'sessionid=abc123; HttpOnly'
+        }
+    )
+    
+    //send the response body
+    res.end('<h1> Hello, world! </h1>'); //creating the server 
+})
+
+server.listen(port, 'localhost', () =>{
+    console.log(`Server is running ar http://localhost:${port}`);
+})
