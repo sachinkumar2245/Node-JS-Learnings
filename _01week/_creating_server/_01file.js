@@ -31,6 +31,8 @@ server.listen(3100, () => {
 
 */
 
+const os = require('os');
+console.log(os.platform())
 
 const http = require('http'); // importing the server
 
@@ -50,8 +52,12 @@ const server = http.createServer((req, res) =>{
     
     //send the response body
     res.end('<h1> Hello, world! </h1>'); //creating the server 
+}).listen(port, () =>{
+    console.log(`Server is runnign at http://localhost:${port}`)
 })
 
+/*
 server.listen(port, 'localhost', () =>{
     console.log(`Server is running ar http://localhost:${port}`);
 })
+*/

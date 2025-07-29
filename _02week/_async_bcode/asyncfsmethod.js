@@ -2,9 +2,19 @@
 
 const { log } = require('console');
 const fs = require ('fs')
-//write file
+const path = require('path');
 
-fs.writeFile('data.txt', "anonymous txt",(err) =>{
+
+
+//way to create the file in same directory
+
+const filePath = path.join(__dirname, 'newdata2.txt');
+
+
+
+
+
+fs.writeFile(filePath, "anonymous txt",(err) =>{
     if(err){
         console.log(err);
         
@@ -14,7 +24,7 @@ fs.writeFile('data.txt', "anonymous txt",(err) =>{
     }
 });
 
-fs.appendFile('data.txt', "\nanother txt", (err) =>{
+fs.appendFile(filePath, "\n another txt", (err) =>{
     if(err){
         console.log(err)
     }else{
@@ -28,10 +38,14 @@ fs.appendFile('data.txt', "\nanother txt", (err) =>{
 
 //readfile
 
-fs.readFile('data.txt2', 'utf-8', (err, data) =>{
+
+
+fs.readFile(filePath, 'utf-8', (err, data) =>{
     if(err){
         log(err);
     }else{
         console.log(data)
     }
 })
+
+
