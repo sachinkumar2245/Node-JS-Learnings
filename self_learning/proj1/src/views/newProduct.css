@@ -1,0 +1,57 @@
+#new-product {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+#new-product h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#new-product form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#new-product label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#new-product input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#new-product input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#new-product button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#new-product button:hover {
+    background: #0056b3;
+}

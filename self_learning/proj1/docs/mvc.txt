@@ -1,0 +1,15 @@
+MVC - Separation of Concerns
+
+##
+
+User uses controller to interact with the model and view.
+controller -> model (Controller manipulates model)
+##
+User uses controller to interact with the view.
+model updates view (Model updates View)
+##
+View displays data to the user.
+view -> user (View displays data to User)
+
+##
+Controller receives user input and updates the model.
