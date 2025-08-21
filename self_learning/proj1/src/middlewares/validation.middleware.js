@@ -1,4 +1,4 @@
-const validateRequest = (req, res, next) => {]
+const validateRequest = (req, res, next) => {
     //now we gon use express validator to validate our data and I'm gonna comment out the previous code
     /*
     const { productName, productPrice, productImage } = req.body;
